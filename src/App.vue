@@ -28,9 +28,29 @@
             <input v-model="marginBottom" type="checkbox" />
           </div>
           <div class="wrapper">
-          <GwiCard :padding="padding" :margin-top="marginTop" :margin-bottom="marginBottom" :layout="stretch">
-            <img class="image" src="http://res.cloudinary.com/gwildu/image/upload/s--L0cn6Pjw--/v1528171787/common/duck1.jpg">
-          </GwiCard>
+            <GwiCard 
+              :padding="padding"
+              :margin-top="marginTop"
+              :margin-bottom="marginBottom"
+              layout="fill"
+              level="3">
+              <img class="image" src="https://res.cloudinary.com/gwildu/image/upload/s--L0cn6Pjw--/v1528171787/common/duck1.jpg">
+            </GwiCard>
+          </div>
+        </div>
+        <div class="group">
+          <GwiHeading :styling-level="3" :margin-top="true">Layout</GwiHeading>
+          <div class="controls">
+            <label>layout: </label>
+            <select v-model="layout">
+              <option>fill</option>
+              <option>stretch</option>
+            </select>
+          </div>
+          <div class="wrapper">
+            <GwiCard :layout="layout" :padding="false" level="3">
+              <img class="image" src="https://res.cloudinary.com/gwildu/image/upload/s--A0n5WYxO--/c_scale,h_333,w_500/v1528171785/common/duck2.jpg" />
+            </GwiCard>
           </div>
         </div>
     </GwiGlobals>
@@ -54,7 +74,8 @@ export default {
       elevationLevel: 3,
       padding: false,
       marginTop: false,
-      marginBottom: false
+      marginBottom: false,
+      layout: "fill"
     };
   }
 };
