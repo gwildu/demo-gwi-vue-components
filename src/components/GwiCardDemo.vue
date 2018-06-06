@@ -1,5 +1,8 @@
 <template>
   <div class="component">
+    <GwiDemoCase name="Without props">
+      <GwiCard>default</GwiCard>
+    </GwiDemoCase>
     <div class="group">
         <GwiHeading :styling-level="3">Without props</GwiHeading>
         <div class="wrapper">
@@ -58,12 +61,14 @@
 <script>
 import GwiCard from "gwi-vue-components/GwiCard";
 import GwiHeading from "gwi-vue-components/GwiHeading";
+import GwiDemoCase from "../tooling/GwiDemoCase"
 
 export default {
   name: "GwiCardDemo",
   components: {
     GwiCard,
     GwiHeading,
+    GwiDemoCase
   },
   data() {
     return {
